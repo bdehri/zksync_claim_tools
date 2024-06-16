@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	distributorAddress = common.HexToAddress("0x903fA9b6339B52FB351b1319c8C0411C044422dF")
+	distributorAddress = common.HexToAddress("0x66Fd4FC8FA52c9bec2AbA368047A0b27e24ecfe4")
 	tokenAddress       = common.HexToAddress("0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E")
 	EthereumProvider   = "https://ethereum-rpc.publicnode.com" // Sepolia testnet
 	TargetAddress      common.Address

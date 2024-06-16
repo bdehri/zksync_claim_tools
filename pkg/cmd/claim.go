@@ -84,6 +84,8 @@ func NewClaimCmd() *cobra.Command {
 				if windowStart.Int64()-time.Now().Unix() <= 2 {
 					break
 				}
+				log.Info().Int64("window_start", windowStart.Int64()).Msg("Waiting for window start minus 2")
+				time.Sleep(1 * time.Second)
 			}
 
 			waitgroup := sync.WaitGroup{}
