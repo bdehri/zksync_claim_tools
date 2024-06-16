@@ -13,6 +13,3 @@ wallets:
     token_amount: "token_amount_2"
 target_address: "your_target_address"
 rpc_url: "your_rpc_url"
-approve: true
-gather_all: false
-only_approve: false
