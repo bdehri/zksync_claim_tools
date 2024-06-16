@@ -11,5 +11,4 @@ wallets:
       - "merkle_proof_2_1"
       - "merkle_proof_2_2"
     token_amount: "token_amount_2"
-target_address: "your_target_address"
 rpc_url: "your_rpc_url"
