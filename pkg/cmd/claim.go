@@ -123,10 +123,16 @@ func NewClaimCmd() *cobra.Command {
 					tokenAmount := new(big.Int)
 					tokenAmount.SetString(wallet.TokenAmount, 10)
 
-					_, err = utils.Claim(distributor, client, opts, merkleIndex, tokenAmount, proof)
-					if err != nil {
-						log.Error().Err(err).Msg("Failed to claim tokens")
-						return
+					claimed := false
+					// network might be congested better to claim, even if there is an error, so error can be omitted
+					claimed, _ = distributor.IsClaimed(nil, merkleIndex)
+
+					if !claimed {
+						_, err = utils.Claim(distributor, client, opts, merkleIndex, tokenAmount, proof)
+						if err != nil {
+							log.Error().Err(err).Msg("Failed to claim tokens")
+							return
+						}
 					}
 
 					if gather {
