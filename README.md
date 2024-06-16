@@ -31,6 +31,13 @@ This command can be used to claim your zkSync tokens from the zkSync contract to
 ./zksync_claim_tools claim --config <config_path> 
 ```
 
+If you want to set gas price manually in gwei, you can use the following command:
+
+```bash
+./zksync_claim_tools claim --config <config_path> --gas-price <gas_price>
+
+```
+
 If you want to gather all tokens to single account, you can use the following command:
 
 ```bash
