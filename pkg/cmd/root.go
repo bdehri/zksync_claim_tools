@@ -17,5 +17,7 @@ func NewRootCmd() *cobra.Command {
 		Use:   "zksync_claim_tools",
 		Short: "A tool to claim zkSync tokens and do erc20 calls",
 	}
+	rootCmd.AddCommand(NewClaimCmd())
+	rootCmd.AddCommand(NewApproveCmd())
 	return rootCmd
 }
